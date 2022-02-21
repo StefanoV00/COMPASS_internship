@@ -1,0 +1,16 @@
+TERMINAL RUNNING LINES:
+rm acompass_out.dat acompass_rnd.dat acompass_smp.dat acompass_evt.dat
+./djangoh < acompass.in
+
+STRUCTFUNC OPTIONS
+
+1)
+STRUCTFUNC
+            0        2      21000
+LHAPATH
+/home/stefano/lhapdf6/share/LHAPDF 
+
+2) (works)
+STRUCTFUNC
+            1        1      10
+

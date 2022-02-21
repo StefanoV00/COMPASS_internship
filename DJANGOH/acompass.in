@@ -1,0 +1,50 @@
+OUTFILENAM
+acompass
+TITLE
+DJANGOH 4.6.18 for COMPASS DIS Simulation with Radiative Corrections
+STRUCTFUNC
+            0        2      21000
+LHAPATH
+/home/stefano/lhapdf6/share/LHAPDF  
+          
+EL-BEAM
+            160.0    0.0    -3
+PR-BEAM
+            0.0      0.0
+KINEM-CUTS
+            3   1.0D-5  0.99  1.0D-5  0.99  1.0D0  1.0D6  1.4D0
+EGAM-MIN
+            0.0
+FLONG
+            111  0.01  0.03
+ALFAS
+            1   1   0.20   0.235
+NFLAVORS
+            1   6                      
+GSW-PARAM
+            2 1 3 1 1 1 2 1 1 1 1
+INT-OPT-NC
+            1 99 99 99 99  0 0 0 0
+INT-OPT-CC
+            0 0 0 0
+INT-POINTS
+            50000
+SAM-OPT-NC
+            1 1 1 1 1  0 0 0 0
+SAM-OPT-CC
+            0 0 0 0
+RNDM-SEEDS
+            -1   -1                      
+START
+            100000
+SOPHIA
+            1.5
+OUT-LEP
+            1
+FRAG
+            1
+CASCADES
+            12
+MAX-VIRT
+            5
+CONTINUE
