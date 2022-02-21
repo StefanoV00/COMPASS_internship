@@ -1,0 +1,550 @@
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.306      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change: 28 Jun 2021  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 23 Aug 2021 at 15:11:31    |  | 
+ |  |                                                                              |  | 
+ |  |   Program documentation and an archive of historic versions is found on:     |  | 
+ |  |                                                                              |  | 
+ |  |                               https://pythia.org/                            |  | 
+ |  |                                                                              |  | 
+ |  |   PYTHIA is authored by a collaboration consisting of:                       |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich, Nishita Desai, Leif Gellersen, Ilkka Helenius, Philip  |  | 
+ |  |   Ilten, Leif Lönnblad, Stephen Mrenna, Stefan Prestel, Christian Preuss,    |  | 
+ |  |   Torbjörn Sjöstrand, Peter Skands, Marius Utheim and Rob Verheyen.          |  | 
+ |  |                                                                              |  | 
+ |  |   The complete list of authors, including contact information and            |  | 
+ |  |   affiliations, can be found on https://pythia.org/.                         |  | 
+ |  |   Problems or bugs should be reported on email at authors@pythia.org.        |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjöstrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjöstrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   PYTHIA is released under the GNU General Public Licence version 2 or later.|  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2021 Torbjörn Sjöstrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+LHAPDF 6.3.0 loading /home/stefano/lhapdf6/share/LHAPDF/MSTW2008lo68cl/MSTW2008lo68cl_0000.dat
+MSTW2008lo68cl PDF set, member #0, version 2; LHAPDF ID = 21000
+LHAPDF 6.3.0 loading /home/stefano/lhapdf6/share/LHAPDF/MSTW2008lo68cl/MSTW2008lo68cl_0000.dat
+MSTW2008lo68cl PDF set, member #0, version 2; LHAPDF ID = 21000
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide mu+ with p+ at a CM energy of 1.735e+01 GeV           |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | f f' -> f f' (t-channel gamma*/Z0)             211 |   2.821e-03 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ *---------------  Welcome to the DIRE parton shower   -------------*
+ |                                                                  |
+ | Please consider citing Eur.Phys.J. C75 (2015) 9, 461             |
+ | if you use this program for scientific purposes.                 |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | BeamRemnants:primordialKT                     |                      off |           on                         | 
+ | BeamRemnants:primordialKThard                 |                  2.28730 |      1.80000         0.0             | 
+ | BeamRemnants:primordialKTsoft                 |                  0.25000 |      0.90000         0.0             | 
+ | BeamRemnants:reducedKTatHighY                 |                  0.47000 |      0.50000         0.0     1.00000 | 
+ | Beams:eA                                      |                160.00000 |     7000.000         0.0             | 
+ | Beams:eB                                      |                      0.0 |     7000.000         0.0             | 
+ | Beams:frameType                               |                        2 |            1           1           5 | 
+ | Beams:idA                                     |                      -13 |         2212                         | 
+ | Check:event                                   |                      off |           on                         | 
+ | ColourReconnection:range                      |                  2.17200 |      1.80000         0.0    10.00000 | 
+ | DireSpace:forceMassiveMap                     |                       on |          off                         | 
+ | HadronLevel:all                               |                      off |           on                         | 
+ | Main:numberOfEvents                           |                    10000 |         1000           0             | 
+ | MultipartonInteractions:alphaSvalue           |                  0.13090 |      0.13000   0.0600000     0.25000 | 
+ | MultipartonInteractions:expPow                |                  1.76900 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  1.72900 |      2.28000     0.50000    10.00000 | 
+ | Next:numberCount                              |                    10000 |         1000           0             | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | PartonLevel:FSR                               |                      off |           on                         | 
+ | PartonLevel:ISR                               |                      off |           on                         | 
+ | PartonLevel:MPI                               |                      off |           on                         | 
+ | PartonLevel:Remnants                          |                      off |           on                         | 
+ | PartonShowers:model                           |                        3 |            1           1           3 | 
+ | PDF:pHardSet                                  |   LHAPDF6:MSTW2008lo68cl |         void                         | 
+ | PDF:pSet                                      |   LHAPDF6:MSTW2008lo68cl |           13                         | 
+ | PDF:useHard                                   |                       on |          off                         | 
+ | PhaseSpace:mHatMin                            |                      0.0 |      4.00000         0.0             | 
+ | PhaseSpace:mHatMinSecond                      |                  0.80000 |      4.00000         0.0             | 
+ | PhaseSpace:pTHatMinDiverge                    |                  0.50000 |      1.00000     0.50000             | 
+ | PhaseSpace:Q2Min                              |                  0.80000 |          0.0         0.0             | 
+ | Photon:showUnres                              |                       on |          off                         | 
+ | ProcessLevel:resonanceDecays                  |                      off |           on                         | 
+ | ShowerPDF:usePDFmasses                        |                      off |           on                         | 
+ | ShowerPDF:useSummedPDF                        |                      off |           on                         | 
+ | SpaceShower:alphaSorder                       |                        2 |            1           0           2 | 
+ | SpaceShower:alphaSvalue                       |                  0.12010 |      0.13650   0.0600000     0.25000 | 
+ | SpaceShower:dipoleRecoil                      |                       on |          off                         | 
+ | SpaceShower:pTmaxMatch                        |                        2 |            0           0           2 | 
+ | SpaceShower:pTmin                             |                  0.90000 |      0.20000     0.10000    10.00000 | 
+ | SpaceShower:QEDshowerByL                      |                      off |           on                         | 
+ | SpaceShower:QEDshowerByQ                      |                      off |           on                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | StringFlav:probStoUD                          |                  0.20460 |      0.21700         0.0     1.00000 | 
+ | StringPT:sigma                                |                  0.29520 |      0.33500         0.0     1.00000 | 
+ | StringZ:aExtraDiquark                         |                  1.34900 |      0.97000         0.0     2.00000 | 
+ | StringZ:aLund                                 |                  0.97040 |      0.68000         0.0     2.00000 | 
+ | StringZ:bLund                                 |                  1.08090 |      0.98000     0.20000     2.00000 | 
+ | StringZ:rFactB                                |                  0.83210 |      0.85500         0.0     2.00000 | 
+ | TimeShower:alphaSorder                        |                        2 |            1           0           2 | 
+ | TimeShower:alphaSvalue                        |                  0.12010 |      0.13650   0.0600000     0.25000 | 
+ | TimeShower:pTmaxMatch                         |                        2 |            1           0           2 | 
+ | TimeShower:pTmin                              |                  0.90000 |      0.50000     0.10000     2.00000 | 
+ | TimeShower:QEDshowerByL                       |                      off |           on                         | 
+ | TimeShower:QEDshowerByQ                       |                      off |           on                         | 
+ | WeakBosonExchange:ff2ff(t:gmZ)                |                       on |          off                         | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+ PYTHIA Warning in PhaseSpace2to2tauyz::trialKin: maximum for cross section violated  
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =    -13, pz =  8.651e+00, e =  8.652e+00, m =  1.057e-01.
+ Beam B: id =   2212, pz = -8.651e+00, e =  8.702e+00, m =  9.383e-01.
+
+ In 1: id =  -13, x =  9.962e-01, pdf =  2.078e+00 at Q2 =  1.086e+00.
+ In 2: id =    1, x =  1.173e-01, pdf =  3.755e-01 at same Q2.
+
+ Subprocess f f' -> f f' (t-channel gamma*/Z0) with code 211 is 2 -> 2.
+ It has sHat =  3.520e+01,    tHat = -1.121e+00,    uHat = -3.408e+01,
+       pTHat =  1.038e+00,   m3Hat =  1.057e-01,   m4Hat =  3.300e-01,
+    thetaHat =  3.589e-01,  phiHat =  4.646e+00.
+     alphaEM =  7.448e-03,  alphaS =  4.914e-01    at Q2 =  1.086e+00.
+
+ Impact parameter b =  0.000e+00 gives enhancement factor =  1.000e+00.
+ Max pT scale for MPI =  1.735e+01, ISR =  1.735e+01, FSR =  1.735e+01.
+ Number of MPI =     1, ISR =     0, FSRproc =     0, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000    160.000    160.938     17.353
+     1        -13  (mu+)              -12     0     0     3     0     0     0      0.000      0.000    160.000    160.000      0.106
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000      0.000      0.938      0.938
+     3        -13  (mu+)              -21     1     0     5     6     0     0      0.000      0.000    159.443    159.443      0.000
+     4          1  (d)                -21     2     0     5     6   101     0      0.000      0.000     -0.055      0.055      0.000
+     5        -13  mu+                 23     3     4     0     0     0     0     -0.069     -1.036    154.283    154.287      0.106
+     6          1  d                   23     3     4     0     0   101     0      0.069      1.036      5.517      5.624      0.330
+                                   Charge sum:  0.667           Momentum sum:      0.000      0.000    159.800    159.911      5.933
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f f' -> f f' (t-channel gamma*/Z0)             211 |     1361803      10000      10000 |   5.098e-05  1.039e-05 |
+ |                                                    |                                   |                        |
+ | sum                                                |     1361803      10000      10000 |   5.098e-05  1.039e-05 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |   1613   Warning in PhaseSpace2to2tauyz::trialKin: maximum for cross section violated                           | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+ PYTHIA Info from Pythia::init: be aware that successive calls to init() do not clear previous settings.  
+LHAPDF 6.3.0 loading /home/stefano/lhapdf6/share/LHAPDF/MSTW2008lo68cl/MSTW2008lo68cl_0000.dat
+MSTW2008lo68cl PDF set, member #0, version 2; LHAPDF ID = 21000
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide mu+ with p+ at a CM energy of 1.735e+01 GeV           |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | f f' -> f f' (t-channel gamma*/Z0)             211 |   2.821e-03 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | BeamRemnants:primordialKT                     |                      off |           on                         | 
+ | BeamRemnants:primordialKThard                 |                  2.28730 |      1.80000         0.0             | 
+ | BeamRemnants:primordialKTsoft                 |                  0.25000 |      0.90000         0.0             | 
+ | BeamRemnants:reducedKTatHighY                 |                  0.47000 |      0.50000         0.0     1.00000 | 
+ | Beams:eA                                      |                160.00000 |     7000.000         0.0             | 
+ | Beams:eB                                      |                      0.0 |     7000.000         0.0             | 
+ | Beams:frameType                               |                        2 |            1           1           5 | 
+ | Beams:idA                                     |                      -13 |         2212                         | 
+ | ColourReconnection:range                      |                  2.17200 |      1.80000         0.0    10.00000 | 
+ | DireSpace:forceMassiveMap                     |                       on |          off                         | 
+ | Main:numberOfEvents                           |                    10000 |         1000           0             | 
+ | MultipartonInteractions:alphaSvalue           |                  0.13090 |      0.13000   0.0600000     0.25000 | 
+ | MultipartonInteractions:expPow                |                  1.76900 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  1.72900 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | PartonShowers:model                           |                        3 |            1           1           3 | 
+ | PDF:pHardSet                                  |   LHAPDF6:MSTW2008lo68cl |         void                         | 
+ | PDF:pSet                                      |   LHAPDF6:MSTW2008lo68cl |           13                         | 
+ | PDF:useHard                                   |                       on |          off                         | 
+ | PhaseSpace:mHatMin                            |                      0.0 |      4.00000         0.0             | 
+ | PhaseSpace:mHatMinSecond                      |                  0.80000 |      4.00000         0.0             | 
+ | PhaseSpace:pTHatMinDiverge                    |                  0.50000 |      1.00000     0.50000             | 
+ | PhaseSpace:Q2Min                              |                  0.80000 |          0.0         0.0             | 
+ | Photon:showUnres                              |                       on |          off                         | 
+ | ProcessLevel:resonanceDecays                  |                      off |           on                         | 
+ | ShowerPDF:usePDFmasses                        |                      off |           on                         | 
+ | ShowerPDF:useSummedPDF                        |                      off |           on                         | 
+ | SpaceShower:alphaSorder                       |                        2 |            1           0           2 | 
+ | SpaceShower:alphaSvalue                       |                  0.12010 |      0.13650   0.0600000     0.25000 | 
+ | SpaceShower:dipoleRecoil                      |                       on |          off                         | 
+ | SpaceShower:pTmaxMatch                        |                        2 |            0           0           2 | 
+ | SpaceShower:pTmin                             |                  0.90000 |      0.20000     0.10000    10.00000 | 
+ | SpaceShower:QEDshowerByL                      |                      off |           on                         | 
+ | SpaceShower:QEDshowerByQ                      |                      off |           on                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | StringFlav:probStoUD                          |                  0.20460 |      0.21700         0.0     1.00000 | 
+ | StringPT:sigma                                |                  0.29520 |      0.33500         0.0     1.00000 | 
+ | StringZ:aExtraDiquark                         |                  1.34900 |      0.97000         0.0     2.00000 | 
+ | StringZ:aLund                                 |                  0.97040 |      0.68000         0.0     2.00000 | 
+ | StringZ:bLund                                 |                  1.08090 |      0.98000     0.20000     2.00000 | 
+ | StringZ:rFactB                                |                  0.83210 |      0.85500         0.0     2.00000 | 
+ | TimeShower:alphaSorder                        |                        2 |            1           0           2 | 
+ | TimeShower:alphaSvalue                        |                  0.12010 |      0.13650   0.0600000     0.25000 | 
+ | TimeShower:pTmaxMatch                         |                        2 |            1           0           2 | 
+ | TimeShower:pTmin                              |                  0.90000 |      0.50000     0.10000     2.00000 | 
+ | TimeShower:QEDshowerByL                       |                      off |           on                         | 
+ | TimeShower:QEDshowerByQ                       |                      off |           on                         | 
+ | WeakBosonExchange:ff2ff(t:gmZ)                |                       on |          off                         | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+
+ Pythia::next(): 10000 events have been generated 
+ PYTHIA Error in BeamRemnants::setOneRemnKinematics: too big beam remnant invariant mass  
+ PYTHIA Error in Pythia::next: partonLevel failed; try again  
+ PYTHIA Abort from Pythia::next: parton+hadronLevel failed; giving up  
+ PYTHIA Error in MiniStringFragmentation::fragment: no 1- or 2-body state found above mass threshold  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+ PYTHIA Warning in MiniStringFragmentation::ministring2two: random axis needed to break tie  
+
+ Pythia::next(): 11000 events have been generated 
+
+ Pythia::next(): 12000 events have been generated 
+
+ Pythia::next(): 13000 events have been generated 
+ PYTHIA Error in BeamRemnants::setKinematics: no momentum left for beam remnants  
+
+ Pythia::next(): 14000 events have been generated 
+
+ Pythia::next(): 15000 events have been generated 
+
+ Pythia::next(): 16000 events have been generated 
+
+ Pythia::next(): 17000 events have been generated 
+
+ Pythia::next(): 18000 events have been generated 
+
+ Pythia::next(): 19000 events have been generated 
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | f f' -> f f' (t-channel gamma*/Z0)             211 |     1356819      10000       9971 |   4.171e-05  2.420e-06 |
+ |                                                    |                                   |                        |
+ | sum                                                |     1356819      10000       9971 |   4.171e-05  2.420e-06 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |     29   Abort from Pythia::next: parton+hadronLevel failed; giving up                                          | 
+ |    100   Error in BeamRemnants::setKinematics: no momentum left for beam remnants                               | 
+ |   1384   Error in BeamRemnants::setOneRemnKinematics: too big beam remnant invariant mass                       | 
+ |    204   Error in MiniStringFragmentation::fragment: no 1- or 2-body state found above mass threshold           | 
+ |    204   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |    140   Error in Pythia::next: partonLevel failed; try again                                                   | 
+ |      1   Info from Pythia::init: be aware that successive calls to init() do not clear previous settings.       | 
+ |      1   Warning in MiniStringFragmentation::ministring2two: random axis needed to break tie                    | 
+ |   3279   Warning in PhaseSpace2to2tauyz::trialKin: maximum for cross section violated                           | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+	 Minimal shower weight     = -1.000000e+00
+	 Maximal shower weight     = 4.924045e+02
+	 Mean shower weight        = 2.009775e+00
+	 Variance of shower weight = 0.000000e+00
+******************************************************************************
+*Tree    :dis       : DIS tree                                               *
+*Entries :     9971 : Total =         3377530 bytes  File  Size =          0 *
+*        :          : Tree compression factor =   1.00                       *
+******************************************************************************
+*Br    0 :Evt       : Evt/i                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    1 :SelV      : SelV/i                                                 *
+*Entries :     9971 : Total  Size=      40669 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    2 :Xprim     : Xprim/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    3 :Yprim     : Yprim/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    4 :Zprim     : Zprim/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    5 :theta     : theta/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    6 :beam_p    : beam_p/F                                               *
+*Entries :     9971 : Total  Size=      40685 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    7 :beamph    : beamph/F                                               *
+*Entries :     9971 : Total  Size=      40685 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    8 :beamth    : beamth/F                                               *
+*Entries :     9971 : Total  Size=      40685 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    9 :aeam_p    : aeam_p/F                                               *
+*Entries :     9971 : Total  Size=      40685 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   10 :aeamph    : aeamph/F                                               *
+*Entries :     9971 : Total  Size=      40685 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   11 :aeamth    : aeamth/F                                               *
+*Entries :     9971 : Total  Size=      40685 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   12 :outlep_p  : aupr_p/F                                               *
+*Entries :     9971 : Total  Size=      40695 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   13 :outlepph  : outlepph/F                                             *
+*Entries :     9971 : Total  Size=      40701 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   14 :outlepth  : outlepth/F                                             *
+*Entries :     9971 : Total  Size=      40701 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   15 :gaene     : gaene/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   16 :gaphi     : gaphi/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   17 :gathe     : gathe/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   18 :phi_s     : phi_s/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   19 :bcm       : bcm/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   20 :gcm       : gcm/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   21 :nu        : nu/F                                                   *
+*Entries :     9971 : Total  Size=      40653 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   22 :Q2        : Q2/F                                                   *
+*Entries :     9971 : Total  Size=      40653 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   23 :xbj       : xbj/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   24 :y         : y/F                                                    *
+*Entries :     9971 : Total  Size=      40645 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   25 :W         : W/F                                                    *
+*Entries :     9971 : Total  Size=      40645 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   26 :nutr      : nutr/F                                                 *
+*Entries :     9971 : Total  Size=      40669 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   27 :Q2tr      : Q2tr/F                                                 *
+*Entries :     9971 : Total  Size=      40669 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   28 :xbjtr     : xbjtr/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   29 :ytr       : ytr/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   30 :Wtr       : Wtr/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   31 :str       : str/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   32 :ttr       : ttr/F                                                  *
+*Entries :     9971 : Total  Size=      40661 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   33 :cosvp     : cosvp/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   34 :gathx     : gathx/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   35 :gathy     : gathy/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   36 :phr_p     : phr_p/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   37 :phrth     : phrth/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   38 :phrph     : phrph/F                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   39 :HadNb     : HadNb/I                                                *
+*Entries :     9971 : Total  Size=      40677 bytes  All baskets in memory   *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   40 :SelH      : SelH[HadNb]/I                                          *
+*Entries :     9971 : Total  Size=     175125 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   41 :ch        : ch[HadNb]/I                                            *
+*Entries :     9971 : Total  Size=     175089 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   42 :zh        : zh[HadNb]/F                                            *
+*Entries :     9971 : Total  Size=     175096 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   43 :eh        : eh[HadNb]/F                                            *
+*Entries :     9971 : Total  Size=     175096 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   44 :ph        : ph[HadNb]/F                                            *
+*Entries :     9971 : Total  Size=     175096 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   45 :theha     : theha[HadNb]/F                                         *
+*Entries :     9971 : Total  Size=     175150 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   46 :phiha     : phiha[HadNb]/F                                         *
+*Entries :     9971 : Total  Size=     175150 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   47 :etah      : etah[HadNb]/F                                          *
+*Entries :     9971 : Total  Size=     175132 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   48 :pth       : pth[HadNb]/F                                           *
+*Entries :     9971 : Total  Size=     175114 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   49 :phi_h     : phi_h[HadNb]/F                                         *
+*Entries :     9971 : Total  Size=     175150 bytes  All baskets in memory   *
+*Baskets :        6 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+Thanks for using LHAPDF 6.3.0. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)

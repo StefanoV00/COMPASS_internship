@@ -1,0 +1,66 @@
+# N. of events and set Hard Process
+Main:numberOfEvents            = 10000
+Next:numberShowEvent           = 1        
+Beams:idA                      = -13
+Beams:idB                      = 2212
+Beams:frameType                = 2
+Beams:eA                       = 160
+Beams:eB                       = 0
+WeakBosonExchange:ff2ff(t:gmZ) = on
+Beams:allowMomentumSpread      = off
+PhaseSpace:mHatMin             = 0.0
+PhaseSpace:pTHatMin            = 0.0
+PhaseSpace:pTHatMinDiverge     = 0.5
+PhaseSpace:Q2Min               = 0.8
+PhaseSpace:mHatMinSecond       = 0.8
+
+# Use external PDF sets from LHAPDF for incoming hadrons.
+#PDF:useHard               = on
+#PDF:pSet                  = LHAPDF5:MSTW2008lo68cl.LHgrid
+#PDF:pHardSet              = LHAPDF5:MSTW2008lo68cl.LHgrid
+#CT10nlo CT10nlo 
+
+# No distribution for incoming leptons.
+PDF:lepton                 = off
+
+# Set reference value of alphaS(Mz).
+SpaceShower:alphaSvalue   = 0.118
+TimeShower:alphaSvalue    = 0.118
+
+#Albi settings
+ProcessLevel:resonanceDecays = off
+HadronLevel:Decay            = off
+SpaceShower:dipoleRecoil     = off
+PartonLevel:FSR              = off
+PartonLevel:ISR              = off
+HadronLevel:BoseEinstein     = off
+BeamRemnants:primordialKT    = off
+
+# Set dire shower and cut-off.
+! Warning: Dire comes with weighted events.
+PartonShowers:model       = 3    ! 1:old showers, 2:vincia, 3:dire
+SpaceShower:pTmin         = 0.2
+TimeShower:pTmin          = 0.2
+
+# Use masses of PDF sets also for shower evolution.
+# Note: Only correctly handled when using external PDF sets from LHAPDF
+ShowerPDF:usePDFalphas    = off
+ShowerPDF:useSummedPDF    = off
+ShowerPDF:usePDFmasses    = off
+DireSpace:forceMassiveMap = on
+
+# Disallow 'power shower'.
+SpaceShower:pTmaxMatch    = 2
+TimeShower:pTmaxMatch     = 2
+
+# Use NLO corrections to timelike evolution.
+#DireTimes:kernelOrder = 3
+# Use NLO corrections to spacelike evolution.
+#DireSpace:kernelOrder = 3
+
+# Vary renormalization scale used in shower.
+#Variations:doVariations = on 
+#Variations:muRisrDown = 0.25
+#Variations:muRisrUp   = 4.0
+#Variations:muRfsrDown = 0.25
+#Variations:muRfsrUp   = 4.0
